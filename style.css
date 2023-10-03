@@ -10,6 +10,10 @@ body {
     overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth
+}
+
 .main-header {
     width: 100%;
     height: 100%;
@@ -95,10 +99,12 @@ nav .navlinks li a {
 
 nav .navlinks li a:hover {
     color: #fff;
-	text-decoration: underline 2px;;
-	text-shadow: 4px 4px 15px #fff, -4px -4px 15px #fff;
-	text-underline-offset: 7px;
+    text-decoration: underline 2px;
+    ;
+    text-shadow: 4px 4px 15px #fff, -4px -4px 15px #fff;
+    text-underline-offset: 7px;
 }
+
 .container {
     display: flex;
     justify-content: space-around;
@@ -229,6 +235,7 @@ nav .navlinks li a:hover {
     nav .navlinks li {
         display: block;
     }
+
     nav .navlinks li a {
         display: block;
         margin-bottom: 15px;
@@ -249,5 +256,88 @@ nav .navlinks li a:hover {
 
     .details-text {
         padding: 40px 0px;
+    }
+}
+
+/* css for experience section */
+
+.projects {
+    margin-top: 7rem;
+    width: 100%;
+}
+
+.projects  h3 {
+    color: #fff;
+    font-size: 1.5rem;
+}
+.cards-list {
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 30px auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    border: 2px solid #007ced;
+}
+
+.card p {
+    position: relative;
+    color: #8c8c8c;
+    padding: 10px;
+    /* margin-right: 10px; */
+}
+.card_title {
+    position: relative;
+    top: 20px;
+    left: 15px;
+    width: 70%;
+    /* border: 2px solid #444; */
+    border-radius: 30px;
+}
+
+.card_links {
+    margin-left: 15px;
+}
+.card_links i {
+    color: #e5e5e5;
+    font-size: 25px;
+    margin-right: 14px;
+    transition: 0.5s;
+}
+
+.card_links i:hover {
+    color: #007ced;
+    transform: rotate(360deg);
+}
+
+.card:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25), -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+.title-white {
+    color: white;
+}
+
+.title-black {
+    color: black;
+}
+
+@media all and (max-width: 500px) {
+    .card-list {
+        /* On small screens, we are no longer using row direction but column */
+        flex-direction: column;
     }
 }
