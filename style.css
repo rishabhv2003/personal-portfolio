@@ -92,17 +92,28 @@ nav .navlinks li {
 }
 
 nav .navlinks li a {
+    position: relative;
     color: #fff;
     margin-right: 2.5rem;
     transition: transform 0.2s ease-in-out;
 }
 
+nav .navlinks li a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    left: 0;
+    bottom: -5px;
+    background-color: #fff;
+    transition: all ease 0.5s;
+}
 nav .navlinks li a:hover {
-    color: #fff;
-    text-decoration: underline 2px;
-    ;
     text-shadow: 4px 4px 15px #fff, -4px -4px 15px #fff;
-    text-underline-offset: 7px;
+}
+
+nav .navlinks li a:hover::after {
+    width: 100%;
 }
 
 .container {
@@ -238,10 +249,20 @@ nav .navlinks li a:hover {
 
     nav .navlinks li a {
         display: block;
+        width: 40%;
+        margin: auto;
         margin-bottom: 15px;
         text-align: center;
+        position: relative;
     }
-
+    nav .navlinks li a::after {
+        position: absolute;
+        width: 0;
+        transition: all ease-in-out 0.5s;
+    }
+    nav .navlinks li a:hover::after {
+        width: 100%;
+    }
     nav .navlinks.open {
         display: block;
         right: 0;
